@@ -13,6 +13,8 @@ Read the user's requirements, existing files, and project rules before proposing
 
 Write or update a single [product record](assets/PRODUCT_RECORD.md) in the authorized project workspace when the task permits files. Preserve prior decisions and measurements; do not replace unknown values with plausible defaults. Give each supported hardware/firmware/software combination a version identity.
 
+For a Chinese voice-keyboard project with soldered and no-solder routes, use the [worked handoff example](references/voice-keyboard-example.zh.md) to adapt that record. It illustrates open decisions, configurable keys, route costs and development/runtime usage; it is not a selected board or a tested hardware build.
+
 ## Drive one complete path first
 
 Choose one reference configuration that can demonstrate the whole user journey, then expand to optional functions and beginner/advanced or no-solder/solder variants. Treat each route as a separate claim of reproducibility. A computer-only mock-up may validate software but does not validate a device microphone or wireless transfer.
@@ -40,5 +42,7 @@ Present a short next action and its reason at each handoff. Continue within the 
 ## Cost and deliverable meaning
 
 Show both **parts consumed in one build** and **cash needed to obtain them**, including minimum order quantities, fabrication, assembly, shipping/tax where known, tools, rework, and ongoing AI/service fees. Keep unknown quotes unknown and refresh time-sensitive prices before purchase. Record hands-on time separately from machine or delivery waiting time. Use provider usage records for tokens, audio minutes, and charges; do not infer token counts from duration or label a per-minute charge as tokens.
+
+When comparing routes, bind costs and work to a `route_id`; record shared work once and explain any allocation instead of duplicating it in a combined total. Separate development Agent usage by task from product runtime usage by event or recording. Missing provider usage stays `unknown`; subscription access does not establish a per-task cash charge.
 
 At delivery, name the actual package: design/source files, firmware image and recovery method, receiver/app, BOM and sourcing, build guide, and test record as applicable. State whether a physical unit, assembly, hosting, subscriptions, and future support are included. Use the product record so a user can tell what they receive for each quoted amount.
