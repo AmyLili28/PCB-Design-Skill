@@ -13,9 +13,11 @@
 
 ## Requirements and routes
 
-| ID | Requirement / route | Observable acceptance | Version or combination | Status (`planned`, `implemented`, `pass`, `fail`, `not_run`) | Evidence / blocker |
-|---|---|---|---|---|---|
-| R1 | [primary user journey] | [device to displayed result] | [reference configuration] | planned | [link or unknown] |
+| ID | Route ID | Requirement | Observable acceptance | Version or combination | Status (`planned`, `implemented`, `pass`, `fail`, `not_run`, `blocked`) | Evidence / blocker |
+|---|---|---|---|---|---|---|
+| R1 | [route or shared] | [primary user journey] | [device to displayed result] | [reference configuration] | planned | [link or unknown] |
+
+Use a stable route ID for each claimed build path. `shared` identifies work or purchases recorded once for reuse; explain allocation when comparing totals. Do not sum alternative route budgets as one purchase order. For configurable controls, record mappings, storage, activation/readback, and behavior after restart or while busy.
 
 ## Interfaces and implementation
 
@@ -27,21 +29,25 @@
 
 ## Product cost and effort
 
-| Item | Qty used per unit | Purchase qty / MOQ | Unit or tier price + quote date | Consumed cost | Cash outlay | Included in quoted delivery? |
-|---|---:|---:|---|---:|---:|---|
-| [part, board, fabrication, assembly, shipping, tool, rework] | [ ] | [ ] | [ ] | [ ] | [ ] | [yes/no/unknown] |
+| Route ID / quote ID | Item | Qty used per unit | Purchase qty / MOQ | Unit or tier price + quote date | Consumed cost | Cash outlay | Included in quoted delivery? |
+|---|---|---:|---:|---|---:|---:|---|
+| [route or shared / source] | [part, board, fabrication, assembly, shipping, tool, rework] | [ ] | [ ] | [ ] | [ ] | [ ] | [yes/no/unknown] |
 
-| Work item | Hands-on time | Machine/delivery waiting | Rework time | Evidence/estimate |
-|---|---:|---:|---:|---|
-| [ ] | [ ] | [ ] | [ ] | [ ] |
+Count each physical purchase once. If a battery is already included in a module, kit, or component-cost report, identify that row rather than adding the same battery charge again. Unknown kit contents or prices remain unresolved.
 
-| Date / sample, event or recording ID | Service and model | Usage quantity/unit (audio duration only when used) | Input/output tokens if reported | Charge/currency | Usage source |
+| Route ID / task ID | Work item | Hands-on time | Machine/delivery waiting | Rework time (subset of hands-on) | Evidence/estimate |
 |---|---|---:|---:|---:|---|
-| [ ] | [ ] | [ ] | [ ] | [ ] |
+| [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
+| Date / route ID | Purpose (`development` / `runtime`) | Task, event or recording ID | Service and model | Usage quantity/unit | Input/output tokens if reported | Charge/currency | Usage source |
+|---|---|---|---|---:|---:|---:|---|
+| [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
+Keep development and runtime subtotals separate, and do not add different currencies or units. Missing usage or per-task charges stay `unknown`; audio duration and subscription access do not imply token counts or a zero charge.
 
 ## Verification and handoff
 
-| Test / route | Exact device, firmware, app, and environment | Result (`pass`, `fail`, `not_run`) | Measurement or artifact | Remaining work |
+| Test / route ID | Exact device, firmware, app, and environment | Result (`pass`, `fail`, `not_run`, `blocked`) | Measurement or artifact | Remaining work |
 |---|---|---|---|---|
 | [primary end-to-end scenario] | [ ] | not_run | [ ] | [ ] |
 
