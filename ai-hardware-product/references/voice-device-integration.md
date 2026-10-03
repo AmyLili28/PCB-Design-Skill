@@ -14,6 +14,8 @@ For wireless transfer, define clip ID, sequence/length, end-of-clip indication, 
 
 Define button and indicator behavior for ready, recording, finishing, transferring, AI processing, completed, and failed. The final success signal means the result has been saved and can be opened, not merely that bytes left the device. Associate button events, audio, AI requests, and displayed output by a stable `recording_id` so retries do not create silent duplicates. Define cancellation, maximum duration, full-buffer behavior, and a recovery path when the receiver or network is unavailable.
 
+When configurable keys or combinations are requested, keep their mapping separate from the recording state machine. Specify where configuration is stored, when an edit becomes active, how the user reads back the active mapping, and what persists after restarting the device and host. Define tap/hold/chord precedence for the chosen controls and the behavior of configuration changes during recording. Test at least one remap and its intended restart behavior; a working record button alone does not verify configurable keys. Do not add this configuration subsystem to a fixed-button product unless requested.
+
 Retain original audio, raw transcription, edited transcription if any, and the final summary as distinguishable artifacts. Check the requested output shape, such as one sentence plus three key points, and include a way to inspect or correct transcript errors. An AI-formatted page is not proof that names, numbers, dates, or negations were captured correctly.
 
 ## Power and end-to-end verification
