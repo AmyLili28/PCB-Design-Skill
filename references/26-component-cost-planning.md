@@ -4,6 +4,8 @@ For a new product, follow [beginner decisions](30-beginner-experience.md) before
 
 Use for new hardware ideas before detailed schematic drawing, and when a user requests a lower-cost BOM. Resume existing designs without repeating accepted intake. This workflow covers components only and does not authorize ordering.
 
+When passing this report into a whole-product budget, record which purchases it already includes. A battery or connector included here must not be charged again as a separate product item; follow the [included-cost example](39-product-total-cost.md). Keep the design BOM complete even when purchase costs are split between reports.
+
 ## From an idea to an initial BOM
 
 1. Translate the idea into a short functional brief: intended use, inputs/outputs, communication, power, controls, firmware behavior and mechanical/assembly needs. Separate confirmed functions, proposed defaults and unresolved choices. Ask only about choices that materially affect function or architecture. Do not add optional features to the required baseline or quietly remove requested features.
