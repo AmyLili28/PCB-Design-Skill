@@ -52,6 +52,9 @@ Local entrypoints: `local_checks.py --root ... --plan ...` runs supported offlin
 
 ## Default outcome and tool choice
 
+For a complete device including firmware, a host application or AI behavior, load the available `ai-hardware-product` Skill to coordinate the whole-product work; this repository also includes it at [ai-hardware-product/SKILL.md](ai-hardware-product/SKILL.md). Keep this PCB Skill responsible for its applicable board stages. A route built entirely from ready-made modules does not require a new custom PCB; verify its interfaces and assembly instead.
+
+
 For a request to design a PCB or prepare it for fabrication, finish at **G5: a reviewed, routed, manufacturing-ready engineering prototype package**. Deliver source, Gerber/drills, BOM, assembly information, ordering parameters, and open items for the user to place the order. Do not initiate purchasing, add parts to a cart, submit orders, pay, or contact vendors unless explicitly requested. Reading manufacturer or distributor pages for datasheets, availability, or part selection is allowed; it does not authorize procurement. G6-G9 apply when assembly, hardware testing, or handoff work is requested; absent hardware does not block completing G5.
 
 For EasyEDA, load the **bundled** API skill before choosing an interaction method. Use documented, version-compatible API calls for project creation and editing. Computer use is appropriate for installing/enabling Gateway, login, visual inspection, or a specific API gap/failure. Record that reason and return to API calls when available. Never continue clicking through design simply because installation used the UI. See [connection and operation routing](references/06-easyeda-execution.md).

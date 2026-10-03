@@ -30,6 +30,8 @@ Bundled EasyEDA API documentation, schematic methods, a local bridge and runtime
 
 ## Recent updates
 
+**2026-10-03 follow-up** adds a [Chinese voice-keyboard handoff example](ai-hardware-product/references/voice-keyboard-example.zh.md), route-specific build/effort records, configurable-key acceptance, separate development/runtime AI usage, and guidance to avoid charging a BOM battery twice. Use the [candidate-branch instructions](HARDWARE_TESTING.md) to test these changes; upstream main and the stable Release do not yet contain this PR.
+
 **Current development branch (unreleased)** fixes custom required checks passing as `N_A` and G6–G8 navigation overlooking missing physical-test records. A product cost ledger now separates what a bare-board or assembled-board quote actually delivers from separately purchased parts, assembly and the remaining cost of a usable device; unknown prices stay unknown. Guidance and a Chinese working template cover exact part variants, device audio reaching the computer, charging and runtime verification. Software and physical results remain distinct.
 
 Use the [peer testing guide](HARDWARE_TESTING.md) (Chinese) to rerun the software suite or contribute real EDA, recording, charging and runtime results; it includes steps and a copyable Issue report template. The optional [whole-product skill](ai-hardware-product/SKILL.md) coordinates hardware, firmware, host software and build tutorials. Copy the entire `ai-hardware-product/` subdirectory into its own `ai-hardware-product` skill directory; install the PCB repository root separately as `pcb-design-to-bringup`. Merely retaining the nested subdirectory does not establish a separate installation of the whole-product skill.
@@ -290,7 +292,9 @@ Verification checks SHA-256 hashes, missing files, and extra files. Use a separa
 
 ## Validation status
 
-The latest software run on 2026-09-22 passed **356 regression cases**, plus **17 toolkit self-test commands with no skips**. The total includes 40 routing-physics, 45 mask-geometry and 17 physical-assertion/entry cases. Mask tests contain 1,000 generated comparisons against independent mathematical oracles. Four additional defects found by independent CLI review were corrected and independently rechecked.
+This 2026-10-03 documentation/Skill update passed 11 focused product-cost regressions and both Skill structure checks. The latest full suite remains the 2026-09-26 run: 480 Python passes, one Windows-only skip, 81 Node passes and a passing simulated bridge; see [VALIDATION.md](VALIDATION.md). No new live EDA or physical result is claimed.
+
+Historical result: the software run on 2026-09-22 passed **356 regression cases**, plus **17 toolkit self-test commands with no skips**. The total includes 40 routing-physics, 45 mask-geometry and 17 physical-assertion/entry cases. Mask tests contain 1,000 generated comparisons against independent mathematical oracles. Four additional defects found by independent CLI review were corrected and independently rechecked.
 
 | Evidence level | Current status |
 |---|---|

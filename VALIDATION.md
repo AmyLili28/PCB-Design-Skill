@@ -1,3 +1,11 @@
+## Skill handoff follow-up, 2026-10-03
+
+Documentation and Skill changes only; no executable implementation changed. Added a Chinese configurable voice-keyboard example, route-specific records, development/runtime usage separation, and explicit treatment of a battery already charged in the component BOM. Corrected the product-record usage table row width and made the current candidate branch discoverable to peer testers.
+
+Validation: `python3 -m unittest discover -s scripts -p test_product_total_cost.py -v` passed all 11 existing tests; both Skill entrypoints passed `quick_validate.py`. The BOM-battery arithmetic was checked with the existing synthetic fixture: one purchase yields 85, entering it twice yields 90, and the documented already-included representation yields 85. These are declared-input examples, not supplier prices. No new test was added just to match prose. Prior full regression remains the dated record below. The attempted Claude Code recheck could not run because its OAuth session had expired; this pass does not claim a new Claude review.
+
+No new EDA session, firmware, microphone/BLE path, charging or endurance measurement was performed. Continue these tests through [HARDWARE_TESTING.md](HARDWARE_TESTING.md), with route and revision identity.
+
 ## Codex and Claude Code joint recheck, 2026-09-26
 
 Two read-only Claude Code reviews and independent scenario checks confirmed the bare-target cost contradiction and the overly audio/battery-specific generic handoff. Corrections preserve bare-board quotes followed by separate assembly, and preserve the complete tests required by an actual voice/battery device. G8/G9 complete-record and later evidence-failure paths now have real-fixture coverage; no progress production change was necessary. See the [decision-by-decision review](JOINT_REVIEW.md), including findings rejected after counterchecks.
